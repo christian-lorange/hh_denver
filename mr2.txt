@@ -1,0 +1,19 @@
+for(i=0; i<range; i++) {
+
+     if (today >=hh[i][d][1] && today <= hh[i][d][2]-1) {
+            icc[i]=hhicon;   //now
+            } else if (today >=hh[i][d][1]-1 && today <= hh[i][d][1]) {
+            icc[i]=soonhhicon;  //soon
+            } else if (today >=hh[i][d][2]-1&& today <= hh[i][d][2]) {
+            icc[i]=endinghhicon;  //ending
+            } else {icc[i]=nothhicon;}
+
+ //   if (today >=hh[i][d][1] && today <= hh[i][d][2]) {
+ //      icc[i]=hhicon;
+ //      } else {
+ //      icc[i]=nothhicon;
+ //      }
+    }
+
+
+  // Define gps locations

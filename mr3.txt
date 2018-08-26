@@ -1,0 +1,2 @@
+ // Define text for popups
+ var pop =[

@@ -1,0 +1,45 @@
+
+
+function days() {
+    var LeafIcon = L.Icon.extend({
+    options: {
+        iconSize:     [25, 35],
+        iconAnchor:   [30, 30],
+        shadowAnchor: [4, 62],
+        popupAnchor:  [-15, -36]
+    }
+});
+
+var hhicon = new LeafIcon({iconUrl: 'img/hh.png'}),
+    nothhicon = new LeafIcon({iconUrl: 'img/nothh.png'}),
+    soonhhicon = new LeafIcon({iconUrl: 'img/soonhh.png'}),
+    endinghhicon = new LeafIcon({iconUrl: 'img/endhh.png'}),
+    current = new LeafIcon({iconUrl: 'img/me.png'});
+
+  var geolocate = document.getElementById('geolocate');
+
+  var mymap = L.map('mapid').setView([40.587353, -105.077061], 13);
+
+  L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiY2xvcmFuZ2UiLCJhIjoiY2pqNXF4enk0MGVmYTNxcWh0Yzk1aGltMSJ9.GBc2xdGQ_iRYlssBEkX0Aw', {
+    maxZoom: 18,
+    attribution: '',
+    id: 'mapbox.streets'
+  }).addTo(mymap);
+
+
+
+  setTimeout(function(){
+
+
+
+ 
+
+
+  // Define pin colors to use
+    var now = new Date();
+    var d = now.getDay();
+   var today1 = new Date().getHours()
+   var today2 = new Date().getMinutes()/60;
+   var today = today1+today2;
+
+    var icc = [nothhicon,nothhicon]; 

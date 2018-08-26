@@ -1,0 +1,119 @@
+
+
+
+$(function(){
+      
+var $filterCheckboxes = $('input[type="checkbox"]');
+
+$filterCheckboxes.on('change', function() {
+
+  var selectedFilters = {};
+
+  $filterCheckboxes.filter(':checked').each(function() {
+
+    if (!selectedFilters.hasOwnProperty(this.name)) {
+      selectedFilters[this.name] = [];
+    }
+
+    selectedFilters[this.name].push(this.value);
+
+  });
+
+  // create a collection containing all of the filterable elements
+  var $filteredResults = $('.venue');
+
+  // loop over the selected filter name -> (array) values pairs
+  $.each(selectedFilters, function(name, filterValues) {
+
+    // filter each .venue element
+    $filteredResults = $filteredResults.filter(function() {
+
+      var matched = false,
+        currentFilterValues = $(this).data('category').split(' ');
+
+      // loop over each category value in the current .venue's data-category
+      $.each(currentFilterValues, function(_, currentFilterValue) {
+
+        // if the current category exists in the selected filters array
+        // set matched to true, and stop looping. as we're ORing in each
+        // set of filters, we only need to match once
+
+        if ($.inArray(currentFilterValue, filterValues) != -1) {
+          matched = true;
+          return false;
+        }
+      });
+
+      // if matched is true the current .venue element is returned
+      return matched;
+
+    });
+  });
+
+  $('.venue').hide().filter($filteredResults).show();
+
+});
+
+
+    });
+
+
+  setTimeout(function(){
+ $("#venues").load( "https://rawgit.com/christian-lorange/happyhour/master/hh.html" );
+  },200);
+
+ 
+  function days() {
+
+   var x = document.getElementsByClassName("card");
+    var y = document.getElementsByClassName("btn btn-link");
+    var z = document.getElementById("refresh_btn");
+
+    x[0].style.width = "94vw";
+    x[0].style.marginLeft = "3vw";
+    x[0].style.borderRadius = "30px";
+    x[0].style.boxShadow = "0px 0px 0px 3px hsl(172, 80%, 50%), 0px 10px 0px 3px hsl(172, 41%, 50%), 0px 10px 10px 3px #0003";
+    x[0].style.minHeight = "30px";
+    x[0].style.marginTop = "10px";
+    x[0].style.marginBottom = "20px";
+    y[0].style.color = "white";
+
+
+    x[1].style.width = "94vw";
+    x[1].style.marginLeft = "3vw";
+    x[1].style.borderRadius = "30px";
+    x[1].style.boxShadow = "0px 0px 0px 3px hsl(172, 80%, 50%), 0px 10px 0px 3px hsl(172, 41%, 50%), 0px 10px 10px 3px #0003";
+    x[1].style.minHeight = "30px";
+    x[1].style.marginTop = "10px";
+    x[1].style.marginBottom = "10px";
+    y[1].style.color = "white";
+
+    z.style.height = "30px";
+    z.style.fontWeight = "bolder";
+    z.style.fontSize = "1.2em";
+ 
+
+
+  setTimeout(function(){
+
+   $("#modal-content").load("https://rawgit.com/christian-lorange/happyhour/master/cards.html");
+  
+   var d = new Date();
+   var n = d.getDay();
+
+   var now = new Date();
+   var l = now.getDay();
+   var today1 = new Date().getHours()
+   var today2 = new Date().getMinutes()/60;
+   var today = today1+today2;
+
+
+   var weekday=new Array(7);
+       weekday[0]="sunday";
+       weekday[1]="monday";
+       weekday[2]="tuesday";
+       weekday[3]="wednesday";
+       weekday[4]="thursday";
+       weekday[5]="friday";
+       weekday[6]="saturday";
+

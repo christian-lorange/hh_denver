@@ -1,0 +1,80 @@
+]
+
+
+  
+  //Remove old pins
+  for(i=0;i<gps.length;i++) {
+    L.marker([gps[i][0], gps[i][1]],{icon: icc[i]}).removeFrom(mymap)
+   
+    }  
+
+
+  // Loop through variables and create pins
+  for(i=0; i<gps.length; i++) {
+
+
+     
+  L.marker([gps[i][0], gps[i][1]],{icon: icc[i]}).addTo(mymap)
+    .bindPopup(pop[i]);    
+
+    }
+
+
+
+
+
+
+
+
+// This uses the HTML5 geolocation API, which is available on
+// most mobile browsers and modern browsers, but not in Internet Explorer
+//
+// See this chart of compatibility for details:
+// http://caniuse.com/#feat=geolocation
+  if (!navigator.geolocation) {
+    geolocate.innerHTML = 'Geolocation is not available';
+} else {
+    geolocate.onclick = function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        mymap.locate();
+        
+ 
+
+    };
+}
+
+
+// Once we've got a position, zoom and center the map
+// on it, and add a single marker.
+  mymap.on('locationfound', function(e) {
+
+
+ 
+    
+    mymap.panTo(new L.LatLng(e.latlng.lat, e.latlng.lng));
+    L.marker([e.latlng.lat, e.latlng.lng],{icon: current}).addTo(mymap)
+    .bindPopup('Here I am!');
+    
+
+    console.log(e.latlng.lat);
+    console.log(e.latlng.lng);     
+
+
+
+ // And hide the geolocation button
+    geolocate.parentNode.removeChild(geolocate);
+
+});
+
+// If the user chooses not to allow their location
+// to be shared, display an error message.
+mymap.on('locationerror', function() {
+    geolocate.innerHTML = 'Position could not be found';
+});
+
+
+    }, 500);
+
+}
+
