@@ -126,7 +126,7 @@ for i=1:height(data)
     end
     
     
-    if ((table2array(data(i,61))))==1
+    if ((table2array(data{i,61})))==1
    s10b='<br><b>Kids Deals:</b><br>';
    s10c= char(table2array(data(i,63)));
 else
