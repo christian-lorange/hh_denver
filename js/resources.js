@@ -60,7 +60,7 @@ $filterCheckboxes.on('change', function() {
 
 
   setTimeout(function(){
- $("#venues").load( "https://rawgit.com/christian-lorange/dd_denver/master/hh.html" );
+ $("#venues").load( "https://rawgit.com/christian-lorange/hh_denver/master/hh.html" );
   },200);
 
  
