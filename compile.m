@@ -100,7 +100,7 @@ fclose (fid2) ;
 
 s1='<b>Name:</b>'; %{Name}
 s2=strcat('<br><b>Address:</b><a href=','''','http://maps.google.com/?q=');% {Location}
-s2b=strcat('''',' target=','''','_system','''',' title=','''','Directions','''','>');
+s2b=strcat('''',' target=','''','_blank','''',' title=','''','Directions','''','>');
 s3='</a><br><b>Happy Hour Times:</b><br>Sunday:';%{Sun Start}-{Sun End}
 s4='<br>Monday:';%{Mon Start}-{Mon End}
 s5='<br>Tuesday:';%{Tues Start}-{Tues End}
