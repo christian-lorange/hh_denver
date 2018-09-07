@@ -296,5 +296,14 @@ function refresh() {
   <script type="text/javascript" src="cordova.js"></script>
   <script src="js/admob.js"></script>
   <script type="text/javascript" src="phonegap.js"></script>
+
+  <script type="text/javascript">
+    $("a[target='_blank']").click(function(e){
+  e.preventDefault();
+  window.open($(e.currentTarget).attr('href'), '_system', '');
+});
+</script>
+
+
 </body>
 </html>
