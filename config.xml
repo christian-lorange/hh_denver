@@ -73,10 +73,9 @@
     <engine name="android" spec="6.4.0" />
     <engine name="ios" spec="~4.5.3" />
     <plugin name="cordova-plugin-whitelist" />
-    <plugin name="cordova-admob-sdk" spec="~0.13.1">
-    <variable name="PLAY_SERVICES_VERSION" value="11.6.0" />
-</plugin>
-    <plugin name="cordova-plugin-admob-free"></plugin>
+    <plugin name="cordova-plugin-admob-free">
+    	<variable name="ADMOB_APP_ID" value="ca-app-pub-7061349157136298~4416973881"/>
+    </plugin>
 
 
     <!-- Third party plugins -->
