@@ -4,7 +4,7 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "com.orangehousehappyhourdenver.app"
-        version   = "1.0.10">
+        version   = "1.0.11">
 
     <name>HHAp Denver</name>
 
@@ -95,15 +95,15 @@
 	<splash qualifier="land-ldpi" src="res/screens/android/drawable-land-ldpi-screen.png" />
 	<splash qualifier="land-mdpi" src="res/screens/android/drawable-land-mdpi-screen.png" />
 	<splash qualifier="land-hdpi" src="res/screens/android/drawable-land-hdpi-screen.png" />
-	<splash qualifier="land-xhdpi" src="res/screens/android/drawable-land-xhdpi-screen.png" />
-	<splash qualifier="land-xxhdpi" src="res/screens/android/drawable-land-xxhdpi-screen.png" />
-	<splash qualifier="land-xxxhdpi" src="res/screens/android/drawable-land-xxxhdpi-screen.png" />
+	<splash qualifier="land-xhdpi" src="res/screens/android/resdrawable-xhdpi/drawable-land-xhdpi-screen.png" />
+	<splash qualifier="land-xxhdpi" src="res/screens/android/resdrawable-xxhdpi/drawable-land-xxhdpi-screen.png" />
+	<splash qualifier="land-xxxhdpi" src="res/screens/android/resdrawable-xxxhdpi/drawable-land-xxxhdpi-screen.png" />
 	<splash qualifier="port-ldpi" src="res/screens/android/drawable-port-ldpi-screen.png" />
 	<splash qualifier="port-mdpi" src="res/screens/android/drawable-port-mdpi-screen.png" />
 	<splash qualifier="port-hdpi" src="res/screens/android/drawable-port-hdpi-screen.png" />
-	<splash qualifier="port-xhdpi" src="res/screens/android/drawable-port-xhdpi-screen.png" />
-	<splash qualifier="port-xxhdpi" src="res/screens/android/drawable-port-xxhdpi-screen.png" />
-	<splash qualifier="port-xxxhdpi" src="res/screens/android/drawable-port-xxxhdpi-screen.png" />
+	<splash qualifier="port-xhdpi" src="res/screens/android/resdrawable-xhdpi/drawable-port-xhdpi-screen.png" />
+	<splash qualifier="port-xxhdpi" src="res/screens/android/resdrawable-xxhdpi/drawable-port-xxhdpi-screen.png" />
+	<splash qualifier="port-xxxhdpi" src="res/screens/android/resdrawable-xxxhdpi/drawable-port-xxxhdpi-screen.png" />
 </platform>
 <platform name="ios">
 	<icon height="57" platform="ios" src="res/icons/ios/icon.png" width="57" />
