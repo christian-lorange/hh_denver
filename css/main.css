@@ -27,22 +27,22 @@ body {
   height: 10vw;
   line-height: 20px;
   padding: 0 5%;
-  background: #eee;
-  margin: 0 0 1px;
+  background: #FFF;
+
   position: relative;
   padding-bottom: 50px;
-  border-radius: 20px;
-  border-width: 3px;
+  border-width: 2px;
   border-color: #000;
   border-style: solid;
   font-size: 0.75em;
-}
+ }
 
 h3.filter_style {
-    background-color: hsl(172, 80%, 50%);
+    background-color: #054F7F;
     font-size: 2em;
     text-align: center;
     width: 100%;
+    color:white;
 }
 
 .filter_style {
@@ -267,15 +267,24 @@ input#Search{
 
 .card {
 
-	background-color:#3887BE;
+
+  margin-bottom: 1px;
+  box-shadow: inset 0px 0px 55px 5px rgba(4,79,127,0.95);
 	
 }
+
+.card-body {
+    background-color: white;
+    width: 100vw;
+    padding-left: 2.5vw;
+    padding-right:1.5vw;}
 
 button.btn.btn-link {
 	font-size: 1.2em;
 	color:black;
 	padding-bottom: 10px;
   font-weight: bolder;
+  width: 100vw;
 }
 
 h5.mb-0 {
@@ -341,23 +350,18 @@ h5.mb-0 {
 }
 
 .ui-button {
-  background:#3887BE;
+  background-color: #099EFF;
   color: #fff;
   font-family: 'Raleway', sans-serif;
   display:inline-grid;
-  width:42.5vw;
+  width:43.5vw;
   z-index:100;
   text-align:center;
   padding:3px;
   margin-left:3px ;
   margin-right:3px;
-  border-radius: 100px 30px 100px 30px;
-  box-shadow: 
-    0px 0px 0px 3px hsl(172, 80%, 50%),
-    0px 10px 0px 3px hsl(172, 41%, 50%),
-    0px 10px 10px 3px #0003;
-    margin-bottom: 15px;
-    margin-top: 10px;
+  margin-bottom: 15px;
+  margin-top: 10px;
   }
   
   .ui-button:hover {
@@ -367,24 +371,17 @@ h5.mb-0 {
 
 #refresh_btn {
   width:94%;
-  background:#3887BE;
-  color: #fff;
-  font-family: 'Raleway', sans-serif;
-  display:inline-grid;
-  z-index:100;
-  text-align:center;
+  background-color: #044F7F;
   padding:3px;
   margin-left:3% ;
   margin-right: 3%;
   border:none;
-  border-radius: 100px 30px 100px 30px;
-  box-shadow: 
-    0px 0px 0px 3px hsl(172, 80%, 50%),
-    0px 10px 0px 3px hsl(172, 41%, 50%),
-    0px 10px 10px 3px #0003;
-    margin-bottom: 15px;
-    margin-top: 10px;
-
+  margin-bottom: 15px;
+  margin-top: 10px;
+  border-radius: 8px;
+  font-weight: bolder;
+  font-size:1.4em;
+  color:white;
 }
 
 
@@ -417,7 +414,7 @@ h5.mb-0 {
 }
 
 .navbar-default {
-  background-color: #3887BE !important;
+  background-color: #044F7F !important;
   border-color: transparent; !important;
   color: white !important;
 }
@@ -447,7 +444,7 @@ h4, .h4, h5, .h5, h6, .h6 {
 }
 
 input#Search{
-  border: 3px solid hsl(172, 80%, 50%);
+  border: 3px solid rgba(5,79,127);
   padding: 5px;
   height: 40px;
   border-radius: 5px;
