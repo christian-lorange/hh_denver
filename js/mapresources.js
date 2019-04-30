@@ -1,4 +1,4 @@
-//file updated at 04/02/19 19:17:11.673
+//file updated at 04/30/19 09:24:08.565
 
 
 function days() {
@@ -418,6 +418,10 @@ var gps=[ [39.741811,-104.989223], [40.5921792,-105.07304959999], [39.913105,-10
     geolocate.innerHTML = 'Geolocation is not available';
 } else {
     geolocate.onclick = function (e) {
+
+        var geomodal = document.getElementById('geomyModal');
+        geomodal.style.display = "block";
+
         e.preventDefault();
         e.stopPropagation();
         mymap.locate();
@@ -432,12 +436,14 @@ var gps=[ [39.741811,-104.989223], [40.5921792,-105.07304959999], [39.913105,-10
 // on it, and add a single marker.
   mymap.on('locationfound', function(e) {
 
-
+    var geomodal = document.getElementById('geomyModal');
+    geomodal.style.display = "none";
  
     
     mymap.panTo(new L.LatLng(e.latlng.lat, e.latlng.lng));
     L.marker([e.latlng.lat, e.latlng.lng],{icon: current}).addTo(mymap)
-    .bindPopup('Here I am!');
+    .bindPopup('Here I am!')
+    .openPopup();
     
 
     console.log(e.latlng.lat);
@@ -453,6 +459,8 @@ var gps=[ [39.741811,-104.989223], [40.5921792,-105.07304959999], [39.913105,-10
 // If the user chooses not to allow their location
 // to be shared, display an error message.
 mymap.on('locationerror', function() {
+    var geomodal = document.getElementById('geomyModal');
+    geomodal.style.display = "none";
     geolocate.innerHTML = 'Position could not be found';
 });
 

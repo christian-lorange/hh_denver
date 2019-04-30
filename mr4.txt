@@ -35,6 +35,10 @@
     geolocate.innerHTML = 'Geolocation is not available';
 } else {
     geolocate.onclick = function (e) {
+
+        var geomodal = document.getElementById('geomyModal');
+        geomodal.style.display = "block";
+
         e.preventDefault();
         e.stopPropagation();
         mymap.locate();
@@ -49,12 +53,14 @@
 // on it, and add a single marker.
   mymap.on('locationfound', function(e) {
 
-
+    var geomodal = document.getElementById('geomyModal');
+    geomodal.style.display = "none";
  
     
     mymap.panTo(new L.LatLng(e.latlng.lat, e.latlng.lng));
     L.marker([e.latlng.lat, e.latlng.lng],{icon: current}).addTo(mymap)
-    .bindPopup('Here I am!');
+    .bindPopup('Here I am!')
+    .openPopup();
     
 
     console.log(e.latlng.lat);
@@ -70,6 +76,8 @@
 // If the user chooses not to allow their location
 // to be shared, display an error message.
 mymap.on('locationerror', function() {
+    var geomodal = document.getElementById('geomyModal');
+    geomodal.style.display = "none";
     geolocate.innerHTML = 'Position could not be found';
 });
 

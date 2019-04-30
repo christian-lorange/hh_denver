@@ -17,9 +17,8 @@
 
   <script type="text/javascript" src="js/bootstrap.js"></script>
   <script type="text/javascript" src="js/hh.js"></script>
- <script type="text/javascript" src="https://rawgit.com/christian-lorange/hh_denver/master/js/mapresources.js"></script>
+<script type="text/javascript" src="https://rawgit.com/christian-lorange/hh_denver/master/js/mapresources.js"></script>
  <!--<script type="text/javascript" src="js/mapresources.js"></script>-->
-
 
 
   <link rel="stylesheet" type="text/css" href="css/main.css">
@@ -37,7 +36,16 @@
 
 </script>
 
+<!-- The Modal -->
+<div id="geomyModal" class="geomodal">
 
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>Trying to Find Your Location</p>
+  </div>
+
+</div>
 
 </head>
 <body onload="days()">
@@ -77,12 +85,14 @@ function refresh() {
 
   </div><!-- /.container-fluid -->
 </nav>
-<div class="container"><a href='map.html' id='' class='ui-button'>Refresh</a></div>
+<div class="container"><a href='#' onclick="geopopup();" id='geolocate' class='ui-button'>Find me</a><a href='map.html' id='' class='ui-button'>Refresh</a></div>
 <div id="mapid" style="width: 100vw; height: 74vh;"></div>
 <div class="footer">
   <p>Current Happy Hour<img src="img/hh.png" alt="Key" width="20vw">Starting Soon<img src="img/soonhh.png" alt="Key" width="20vw">Ending Soon<img src="img/endhh.png" alt="Key" width="20vw"></pre></p>
 
 </div>
+
+
 <script>
 
  
