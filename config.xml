@@ -4,7 +4,7 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "com.orangehousehappyhourdenver.app"
-        version   = "1.0.13">
+        version   = "1.0.14">
 
     <name>HHAp Denver</name>
 
@@ -64,6 +64,10 @@
 
     <plugin name="cordova-plugin-network-information" />
     <plugin name="cordova-plugin-splashscreen"  />
+
+    <edit-config target="NSLocationWhenInUseUsageDescription" file="*-Info.plist" mode="merge">
+    <string>We need location access to display your current location on the map</string>
+    </edit-config>
 
  
 
