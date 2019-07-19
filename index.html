@@ -34,6 +34,25 @@
 // Open the Modal
 function openModal() {
   document.getElementById('myModal').style.display = "block";
+
+  
+   if (localStorage.getItem("tracking") === null) {
+    localStorage.setItem("tracking", "1");
+   }
+
+  
+  var tracking_current = localStorage.getItem("tracking");
+  var tracking_current = tracking_current+parseInt("1");
+
+  localStorage.setItem("tracking", tracking_current);
+
+  if(tracking_current.length>=7){
+    CallButton()
+    localStorage.setItem("tracking", "1");
+  }
+
+
+  
 }
 
 // Close the Modal
@@ -73,7 +92,7 @@ function showSlides(n) {
 
 <!--Trigger interstitial add after 30 seconds -->
 <script type="text/javascript">
-setTimeout("CallButton()",30000)
+//setTimeout("CallButton()",30000)
 function CallButton()
 {
    admob.interstitial.show() 
