@@ -42,7 +42,7 @@
     <preference name="SplashScreenDelay" value="0"/>
 
     <!--    Define a specific version of PhoneGap to build into your app. -->
-     <preference name="phonegap-version"       value="cli-8.0.0" />
+     <preference name="phonegap-version"       value="cli-9.0.0" />
     
 
     <!-- Plugins -->
@@ -75,8 +75,8 @@
  <content src="index.html" />
 
     
-    <engine name="android" spec="6.4.0" />
-    <engine name="ios" spec="~4.5.3" />
+    <engine name="android" />
+    <engine name="ios"/>
     <plugin name="cordova-plugin-whitelist" />
     <plugin name="cordova-plugin-admob-free" spec="0.19.0">
     </plugin>
