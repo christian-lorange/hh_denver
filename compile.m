@@ -40,7 +40,8 @@ fclose(fid) ;
 X = char(X.') ;
 % replace string S1 with string S2
 Y = strrep(X, '@', '"') ;
-Z = strrep(Y, '.3', ':30') ;
+YY = strrep(Y, '*', "'") ;
+Z = strrep(YY, '.3', ':30') ;
 fid2 = fopen('hh.html','wt') ;
 fwrite(fid2,Z) ;
 fclose (fid2) ;
