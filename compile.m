@@ -4,7 +4,8 @@ data=readtable('database_working.xlsx');
 
 s1='<div class="venue" data-id="aloe" data-category="';  %add in categories
 s2='" onclick="openModal();currentSlide('; %add in index number
-s3=')"> <span class="location">'; %add in location name
+s3="); ga_anl('send', 'event', 'Venue', 'Viewed Happy Hour', *"
+s3b='*)"> <span class="location">'; %add in location name
 s4='</span><span class="area">'; %add in area
 s5='</span> <span class="sunday hh_t">'; %add in sunday
 s6='</span><span class="monday hh_t">'; %add in monday
@@ -23,7 +24,7 @@ v=[];
 for i=1:height(data)
   
     
-    venues=strcat(s1,char(table2array(data(i,56))),s2,num2str(i),s3,char(table2array(data(i,1))),s4,char(table2array(data(i,57))),s5,char(table2array(data(i,36))),s6,char(table2array(data(i,37))),s7,char(table2array(data(i,38))),s8,char(table2array(data(i,39))),s9,char(table2array(data(i,40))),s10,char(table2array(data(i,41))),s11,char(table2array(data(i,42))),s12,char(table2array(data(i,55))),s13);
+    venues=strcat(s1,char(table2array(data(i,56))),s2,num2str(i),s3,char(table2array(data(i,1))),s3b,char(table2array(data(i,1))),s4,char(table2array(data(i,57))),s5,char(table2array(data(i,36))),s6,char(table2array(data(i,37))),s7,char(table2array(data(i,38))),s8,char(table2array(data(i,39))),s9,char(table2array(data(i,40))),s10,char(table2array(data(i,41))),s11,char(table2array(data(i,42))),s12,char(table2array(data(i,55))),s13);
     
     v=[v;{venues}];
     
